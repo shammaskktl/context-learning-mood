@@ -69,7 +69,8 @@ function App() {
 
   const cartCtx= {
     items: shoppingCart.items,
-    addItemToCart: handleAddItemToCart
+    addItemToCart: handleAddItemToCart,
+    UpdateCartItemQuantity: handleUpdateCartItemQuantity,
   }
 
   return (
@@ -81,7 +82,7 @@ function App() {
       <Shop>
         {DUMMY_PRODUCTS.map((product) => (
           <li key={product.id}>
-            <Product {...product} onAddToCart={handleAddItemToCart} />
+            <Product {...product} />
           </li>
         ))}
       </Shop>
