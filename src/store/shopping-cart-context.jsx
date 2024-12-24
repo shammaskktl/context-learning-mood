@@ -8,6 +8,7 @@ export const CartContext = createContext({
 })
 
 export default function CartContextProvider({children}) {
+    const [shoppingCartState,shoppingCartDispatch] = useReducer()
     const [shoppingCart, setShoppingCart] = useState({
         items: [],
     });
